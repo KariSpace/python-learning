@@ -28,7 +28,7 @@ Common ways to traverse in depth-first order:
 #### Pre-order 
 <img width="150" align="right" alt="image" src="https://user-images.githubusercontent.com/52755167/186539350-b729e430-ffc2-4f96-82b0-335afaf1388d.png">
 
-1.1 Check if curent node is empty/null 
+1.1 Check if curent node is empty/null
 1.2 Display data
 1.3 Go down througth left subtree recursievly calling the pre-order function
 1.4 Repeat for right subtree 
@@ -49,5 +49,3 @@ Common ways to traverse in depth-first order:
 1.2 Go down througth left subtree recursievly 
 1.3 Go down througth right subtree recursievly 
 1.4 Display data
-
-git commit -m "Common ways to travers binaty tree: in-order, post-order, pre-order"
