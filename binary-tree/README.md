@@ -10,7 +10,7 @@ Code and theory based on:
 
 ___
 
-###Theory:
+### Theory:
 
  Tree represents the nodes connected by edges. It is a non-linear data structure. It has the following properties:
 
@@ -25,7 +25,7 @@ ___
 
 Common ways to traverse in depth-first order:
 
-####Pre-order 
+#### Pre-order 
 <img width="150" align="right" alt="image" src="https://user-images.githubusercontent.com/52755167/186539350-b729e430-ffc2-4f96-82b0-335afaf1388d.png">
 
 1.1 Check if curent node is empty/null 
@@ -34,7 +34,7 @@ Common ways to traverse in depth-first order:
 1.4 Repeat for right subtree 
 
 
-####In-order 
+#### In-order 
 <img width="150" align="right" alt="image" src="https://user-images.githubusercontent.com/52755167/186545064-7e2d4441-3ade-4636-b9d1-884d4a77fb35.png">
 
 1.1 Check if curent node is empty/null 
@@ -42,7 +42,7 @@ Common ways to traverse in depth-first order:
 1.3 Display data
 1.4 Traverse right subtree
 
-####Post-order 
+#### Post-order 
 <img width="150" align="right" alt="image" src="https://user-images.githubusercontent.com/52755167/186545030-8e38f04c-8871-4a28-b10b-b70a07cbc54d.png">
 
 1.1 Check if curent node is empty/null 
