@@ -1,2 +1,5 @@
 # python-learning
-a repo to learn python
+
+
+https://roadmap.sh/python
+https://roadmap.sh/backend
