@@ -25,6 +25,8 @@ class Stack(object):
     def __len__(self):
         return self.size()
 
+    def __str__(self):
+        return str(self.items)
 
 class Queue(object):
     def __init__(self):
@@ -133,23 +135,53 @@ class BinaryTree(object):
 
 		queue = Queue()
 		stack = Stack()
+		stack2 = Stack()
 		queue.enqueue(start)
 
 		traversal = ""
 		while len(queue) > 0:
 			node = queue.dequeue()
 			stack.push(node)
+			stack2.push(node.value)
 
 			if node.right:
 				queue.enqueue(node.right)
 			if node.left:
 				queue.enqueue(node.left)
 
+		print(stack2)
 		while len(stack) > 0:
 			node = stack.pop()
-			traversal += str(node.value) + " "
-			return traversal
+			traversal += str(str(node.value)) + " "
+		return traversal
 
+
+	#  reverse-order
+	def reverse_order_print(self, start):  
+		if start is None:
+			return 
+
+		queue = Queue()
+		stack = Stack()
+		stack2 = Stack()
+		queue.enqueue(start)
+
+		traversal = ""
+		while len(queue) > 0:
+			node = queue.dequeue()
+			stack.push(node)
+			stack2.push(node.value)
+			if node.left:
+				queue.enqueue(node.left)
+
+			if node.right:
+				queue.enqueue(node.right)
+
+		print(stack2)
+		while len(stack) > 0:
+			node = stack.pop()
+			traversal += str(str(node.value)) + " "
+		return traversal
 
 
 
@@ -181,5 +213,9 @@ tree.root.right.right.right = Node(15)
 # print(tree.postorder_print(tree.root, ''))
 
 print(tree.reverse_levelorder_print(tree.root))
+
+
+
+print(tree.reverse_order_print(tree.root))
 
 
