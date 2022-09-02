@@ -9,7 +9,9 @@ class NewList (list) :  # Наслідуємо клас list
 
 n_list = NewList([1, 2, 3, 4])
 
-a = [1, 2, 3, 4] 
+a = [1, 2, 3, 4]*2
+
+print(a)
 print(n_list[1])
 print(n_list[-1])
 
