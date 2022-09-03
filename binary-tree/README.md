@@ -49,3 +49,27 @@ Common ways to traverse in depth-first order:
 1.2 Go down througth left subtree recursievly 
 1.3 Go down througth right subtree recursievly 
 1.4 Display data
+
+#### Level-order 
+
+<img width="270" alt="image" src="https://user-images.githubusercontent.com/52755167/188278935-ead6f53c-0ff7-4249-96aa-88d82add50a7.png">
+
+
+
+1.1 Check if curent node is empty/null 
+1.2 Display data
+1.3 Check left node and write to Queue 
+1.4 Check right node and write to Queue 
+1.5 Take node form Queue
+
+#### Reverse Level-order 
+
+
+<img width="290" alt="image" src="https://user-images.githubusercontent.com/52755167/188278790-7525dc14-68ef-4482-9e5a-8be3dc9dcb83.png">
+
+1.1 Check if curent node is empty/null 
+1.2 Display data
+1.3 Check left node and write to Queue 
+1.4 Check right node and write to Queue 
+1.5 Take node form Queue
+

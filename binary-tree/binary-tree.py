@@ -62,14 +62,6 @@ class BinaryTree(object):
 	def __init__(self, root):
 		self.root = Node(root)
 
-	def print_tree(self, traversal_type):
-		if traversal_type == 'preorder':
-			return self.preorder_print(tree.root, '')
-		if traversal_type == 'inorder':
-			return self.inorder_print(tree.root, '')
-		if traversal_type == 'postorder':
-			return self.postorder_print(tree.root, '')
-
 	# pre-order
 	def preorder_print(self, start, traversal):
 		if start:
@@ -77,6 +69,8 @@ class BinaryTree(object):
 			traversal = self.preorder_print(start.left, traversal)
 			traversal = self.preorder_print(start.right, traversal)
 		return traversal
+
+
 	# in-order
 	def inorder_print(self, start, traversal):
 		if start:
@@ -85,6 +79,7 @@ class BinaryTree(object):
 			traversal = self.inorder_print(start.right, traversal)
 		return traversal
 
+	
 	# post-order
 	def postorder_print(self, start, traversal):
 		if start:
@@ -93,19 +88,7 @@ class BinaryTree(object):
 			traversal += (str(start.value) + ' ')
 		return traversal
 
-	# level-order
-	def levelorder_wrong_print(self, start):
-
-		if start:
-			# print(start.value)
-			if(start.left):
-				print(start.left.value)
-			if(start.left):
-				print(start.right.value)
-			traversal = self.levelorder_print(start.left)
-			traversal = self.levelorder_print(start.right)
-
-		return traversal
+	
 	# level-order
 	def levelorder_print(self, start):  
 
@@ -123,12 +106,12 @@ class BinaryTree(object):
 				queue.enqueue(node.left)
 			if node.right:
 				queue.enqueue(node.right)
-
+				
+			
 		return traversal
 
 
-
-	# level-order
+	# reverse_levelorder-order
 	def reverse_levelorder_print(self, start):  
 		if start is None:
 			return 
@@ -149,10 +132,9 @@ class BinaryTree(object):
 			if node.left:
 				queue.enqueue(node.left)
 
-		print(stack2)
 		while len(stack) > 0:
 			node = stack.pop()
-			traversal += str(str(node.value)) + " "
+			traversal += str(node.value) + " "
 		return traversal
 
 
@@ -163,25 +145,33 @@ class BinaryTree(object):
 
 		queue = Queue()
 		stack = Stack()
-		stack2 = Stack()
 		queue.enqueue(start)
 
 		traversal = ""
 		while len(queue) > 0:
 			node = queue.dequeue()
 			stack.push(node)
-			stack2.push(node.value)
 			if node.left:
 				queue.enqueue(node.left)
 
 			if node.right:
 				queue.enqueue(node.right)
 
-		print(stack2)
 		while len(stack) > 0:
 			node = stack.pop()
 			traversal += str(str(node.value)) + " "
 		return traversal
+
+
+	# pre-order
+	def tree_height(self, start, height, counter):
+		if counter>height : height = counter
+		counter+=1
+		# print(height)
+		if start:
+			height = self.tree_height(start.left, height, counter)
+			height = self.tree_height(start.right, height, counter)
+		return height
 
 
 
@@ -212,10 +202,10 @@ tree.root.right.right.right = Node(15)
 
 # print(tree.postorder_print(tree.root, ''))
 
-print(tree.reverse_levelorder_print(tree.root))
+#print(tree.reverse_levelorder_print(tree.root))
 
 
 
-print(tree.reverse_order_print(tree.root))
+print(tree.tree_height(tree.root.left, 0, 0))
 
 
