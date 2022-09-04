@@ -1,4 +1,4 @@
-from inspect import stack
+from turtle import left
 
 
 class Stack(object):
@@ -174,7 +174,41 @@ class BinaryTree(object):
 		return height
 
 
+	def size(self,  size = 0):  
+		if self.root is None:
+			return 0
 
+		stack = Stack()
+		stack.push(self.root)
+
+		while stack:
+			node = stack.pop()
+			if node.left:
+				stack.push(node.left)
+				size+=1
+
+			if node.right:
+				stack.push(node.right)
+				size+=1
+
+		return 1+size # add root node
+
+
+	def size_short(self, node):  
+		if node is None:
+			return 0
+
+		return 1 + self.size_short(node.left) + self.size_short(node.right) # add root node
+
+
+	def height(self, node):
+		if node is None:
+			return -1
+
+		left_height = self.height(node.left)
+		right_height = self.height(node.left)
+
+		return 1 + max(right_height, left_height)
 
 # Full binary tree
 tree = BinaryTree(1)
@@ -202,10 +236,13 @@ tree.root.right.right.right = Node(15)
 
 # print(tree.postorder_print(tree.root, ''))
 
-#print(tree.reverse_levelorder_print(tree.root))
+# print(tree.reverse_levelorder_print(tree.root))
+
+# print(tree.tree_height(tree.root.left, 0, 0))
+
+# print(tree.height(tree.root.left, 0, 0))
 
 
-
-print(tree.tree_height(tree.root.left, 0, 0))
+print(tree.size_short(tree.root))
 
 
