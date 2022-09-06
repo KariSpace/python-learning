@@ -4,10 +4,28 @@
 https://roadmap.sh/python
 https://roadmap.sh/backend
 
+Main Concepts of Object-Oriented Programming (OOPs) 
+- Class
+- Objects
+- Polymorphism
+- Encapsulation
+- Inheritance
+- Data Abstraction
 
+###Python class:  
 
-why lists start with 0: 
-- https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html
-- https://en.wikipedia.org/wiki/Zero-based_numbering#cite_note-dijkstra-8
-- In C, the name of an array is essentially a pointer, a reference to a memory location, and so the expression array[n] refers to a memory location n-elements away from the starting element. This means that the index is used as an offset. The first element of the array is exactly contained in the memory location that array refers (0 elements away), so it should be denoted as array[0]. Most programming languages have been designed this way, so indexing from 0 is pretty much inherent to the language as most of the languages (not all) follow C standards. You can refer this link for more details.
-- https://stackoverflow.com/questions/41530124/why-does-an-array-index-or-base-index-start-with-0
+Classes are created by keyword class.
+Attributes are the variables that belong to a class.
+Attributes are always public and can be accessed using the dot (.) operator. Eg.: Myclass.Myattribute
+
+###An object consists of :
+
+State: It is represented by the attributes of an object. It also reflects the properties of an object.
+Behavior: It is represented by the methods of an object. It also reflects the response of an object to other objects.
+Identity: It gives a unique name to an object and enables one object to interact with other objects.
+
+###Self
+
+The self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. 
+Self is always pointing to Current Object.
+
