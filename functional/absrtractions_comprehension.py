@@ -1,22 +1,29 @@
-'''Абстракции - это та особенность Python, которой мне будет очень сильно недоставать, 
-если я сменю язык программирования. Абстракции - это конструкторы, позволяющие создавать 
+'''Абстракции - это конструкторы, позволяющие создавать 
 последовательности из других последовательностей
 
 абстракции списков
 абстракции словарей
 абстракции множеств
 абстракции генераторов
+      ======
+list/dict/set comprehension (comprehension - включение) listcomp/dictcomp/setcomp.
 '''
 
-# variable = [out_exp for out_exp in input_list if out_exp == 2]
+
+'''
+Template: 
+variable = [out_exp for out_exp in input_list if out_exp == 2]
+'''
+
 
 # LISTS ABSTRACTIONS
 
-multiples = [i for i in range(30) if i % 3 == 0]
+multiples = [i for i in range(30) if i % 3 == 0] #вместо функции filter
 print(multiples)
 # Вывод: [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
 
-# Использование такого подхода вместо функции filter позволяет повысить читаемость кода (без потери скорости исполнения)
+
+#example 2:
 
 squared = []
 for x in range(10):
@@ -25,6 +32,8 @@ for x in range(10):
 # same to
 
 squared = [x**2 for x in range(10)]
+
+
 
 
 # DICTS ABSTRACTIONS

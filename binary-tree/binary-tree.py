@@ -58,7 +58,9 @@ class Node():
 		self.left = None
 		self.right = None
 
-class BinaryTree():
+
+# MAIN
+class BinaryTree(): 
 	def __init__(self, root):
 		self.root = Node(root)
 
