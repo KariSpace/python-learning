@@ -12,7 +12,9 @@ list/dict/set comprehension (comprehension - включение) listcomp/dictco
 
 '''
 Template: 
-variable = [out_exp for out_exp in input_list if out_exp == 2]
+
+newlist = [expression for item in iterable if condition == True]
+
 '''
 
 

@@ -42,3 +42,8 @@ SELECT CAST(NOW() AS DATE); -- MORE COMMON WAY
 
 -- Intervals:
 SELECT (NOW() - INTERVAL '2 days') :: DATE;
+
+-- Date_trunk
+SELECT DATE_TRUNK ('hour', TIMESTAMP '2017-03-17 02:09:27') 
+-- date_trunk :  '2017-03-17 02:00:00
+
